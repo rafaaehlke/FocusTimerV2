@@ -42,4 +42,4 @@ export  function updateDisplay(minutes, seconds){
    
   el.seconds.textContent = String(seconds).padStart(2, "0") //pegamos do elemento, seconds e transformamos em string, definimos que ira conter
   //2 caracteres, e o primeiro será 0
-}
+} 
