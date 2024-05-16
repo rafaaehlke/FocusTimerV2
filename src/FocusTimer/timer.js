@@ -5,6 +5,7 @@ import { kitchenTimer } from './sound.js'
 
 export function countdown() {
 
+  clearTimeout(state.countdownId)
 
   if(!state.isRunning) { //se nao estiver executando, para!
     return
@@ -28,7 +29,7 @@ export function countdown() {
 
   updateDisplay(minutes, seconds)
 
- setTimeout(() => countdown(), 1000) //criamos um callback function, para a cada 1segundo ele executar o countdown
+   state.countdownId = setTimeout(() => countdown(), 1000) //criamos um callback function, para a cada 1segundo ele executar o countdown
 }
 
 
